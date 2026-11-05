@@ -1,17 +1,12 @@
-# VAHINI WEDDINGS — Deployment instructions
+# VAHINI WEDDINGS — GitHub Pages deployment
 
-This ZIP has index.html at its root, suitable for static hosting.
+1. Upload **the contents of this folder** into the root of your GitHub repository (not another nested folder). `index.html` must be at repository root.
+2. Repository Settings → Pages → Build and deployment: choose **Deploy from a branch** → `main` → `/ (root)` → Save. This uses the simple branch-based deployment and does not require a custom workflow file.
+3. If you prefer GitHub Actions, choose that source instead and allow GitHub to generate the standard Pages workflow. Do not run competing workflows simultaneously.
+4. Wait a few minutes, then visit `https://YOUR_USERNAME.github.io/YOUR_REPOSITORY/`.
+5. If GitHub Pages shows `updating_pages` until timeout while the build succeeded, it is a GitHub Pages deployment status timeout; changing HTML alone cannot guarantee a fix. Retry the workflow, inspect the Pages status, and check GitHub Status.
 
-## Netlify Drop
-Upload this ZIP at https://app.netlify.com/drop (or drag the extracted folder).
-
-## Cloudflare Pages
-Use Workers & Pages > Create > Pages > Upload assets, then upload the extracted folder contents.
-
-## GitHub Pages
-Upload the files in the ZIP root to the publishing branch root.
-
-## Important demo limitation
-admin.html is a local-browser demo, NOT a secured production admin. Its uploads are stored in browser IndexedDB and are NOT deployed, synced to other visitors, or persisted on the hosting server. Do not upload sensitive files. For production uploads, a server backend, authentication and object storage are required.
-
-Sample images and videos use third-party external URLs and may fail if blocked or removed.
+## Important limitations
+- `admin.html` is a **local demo**, not authenticated and not connected to a server. Uploads exist only in the browser that uploaded them, and can be lost when browser data is cleared.
+- The sample images and videos use external URLs. The MP4 files are **not** bundled offline.
+- GitHub Pages is static hosting, not 20 TB storage. For production uploads use a real authenticated backend and object storage.
