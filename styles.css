@@ -26,3 +26,18 @@
 @media(max-width:900px){.gallery-grid{columns:2;column-gap:9px}.gallery-grid .media-card{margin-bottom:9px}}
 @media(max-width:540px){.gallery-grid{columns:2;column-gap:6px}.gallery-grid .media-card{margin-bottom:6px}}
 @media(max-width:360px){.gallery-grid{columns:1}}
+
+/* Header refinement: left-aligned wordmark beside the theme icon. */
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.header-left{display:flex;align-items:center;gap:clamp(8px,1.4vw,20px);min-width:0}
+.topbar .brand{font-weight:600;text-align:left;letter-spacing:clamp(.10em,.36vw,.22em);font-size:clamp(12px,1.4vw,18px);white-space:nowrap}
+.theme-toggle{flex:0 0 40px}
+.topbar nav{margin-left:auto;flex-shrink:0}
+@media(max-width:600px){.topbar{gap:8px;padding:0 12px}.header-left{gap:4px}.theme-toggle{flex-basis:30px;width:30px}.theme-toggle svg{width:20px;height:20px}.topbar .brand{font-size:clamp(10px,2.65vw,13px);letter-spacing:.06em;font-weight:600}}
+
+/* Header: brand on left, film and SVG theme icon on right */
+.topbar{display:flex;align-items:center;justify-content:space-between}
+.header-right{display:flex;align-items:center;gap:clamp(10px,2vw,28px);margin-left:auto}
+.header-right nav{display:flex;align-items:center}
+.header-right .theme-toggle{flex:0 0 40px;display:grid;place-items:center}
+@media(max-width:600px){.header-right{gap:8px}.header-right .theme-toggle{flex:0 0 30px}}
