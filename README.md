@@ -18,3 +18,18 @@ For production: add an authenticated backend, a database, Cloudflare R2 or compa
 
 ## Files
 `index.html` public gallery; `admin.html` demo dashboard; `styles.css` styling; `shared.js` browser storage and samples; `main.js` gallery interactions; `admin.js` dashboard interactions; `assets/` reference logo and video placeholder.
+
+
+## Updated sample visuals
+
+The default hero now uses a real wedding photograph from Unsplash. Three sample wedding film entries are linked to Mixkit preview video streams (internet required). They are not embedded inside the ZIP. Their individual source pages are listed in shared.js; check each clip's license before publishing commercially. If a provider blocks remote playback, use the Admin page to upload your own MP4 clips instead. The website does not promise that external CDN links remain available.
+
+
+Update: header has left SVG theme toggle, single-line brand and Film toggle; all media appear together by default. Film toggles videos-only view. Gallery cards retain natural image proportions; lightbox uses contain fitting. Admin remains available directly at admin.html (not linked from public header).
+
+
+## Masonry gallery update
+The public gallery now uses independent CSS columns so short images and video thumbnails fill gaps under each other, rather than sharing the height of the tallest item in a grid row. Original proportions are preserved. Desktop: three columns; tablets: two; narrow screens: one.
+
+## Video files and offline use
+The three included sample video URLs point to external Mixkit preview MP4s. They are **not downloaded or bundled**: this build environment cannot fetch the remote video bytes. They need an internet connection and may stop working if the provider changes its URLs. To package genuine local footage, use the separate `admin.html` page to upload MP4 videos on the viewing browser (demo-only local storage), or supply your licensed MP4 files for embedding in the ZIP. Do not present this demo as an offline video package or as production-scale storage.
