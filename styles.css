@@ -52,3 +52,17 @@
 .lb-content{position:absolute;inset:54px 72px 62px;overflow:hidden}
 .lb-content img,.lb-content video{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
 @media(max-width:600px){.lb-content{inset:55px 10px 105px}.topbar .brand{font-size:clamp(9px,2.65vw,13px);white-space:nowrap}}
+
+/* Mobile header: readable single-line wordmark without overlapping Film/theme controls */
+@media (max-width: 600px) {
+  .topbar { gap: 8px; padding-inline: 12px; }
+  .topbar .brand { font-size: clamp(14px, 3.85vw, 16px); font-weight: 600; letter-spacing: .015em; line-height: 1.2; white-space: nowrap; flex: 0 1 auto; }
+  .header-right { gap: 6px; flex-shrink: 0; }
+  .film-nav { font-size: 11px; }
+  .header-right .theme-toggle { flex: 0 0 30px; width: 30px; }
+}
+@media (max-width: 350px) {
+  .topbar { padding-inline: 8px; gap: 4px; }
+  .topbar .brand { font-size: 13px; letter-spacing: 0; }
+  .header-right { gap: 3px; }
+}
